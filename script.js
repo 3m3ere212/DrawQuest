@@ -6,7 +6,7 @@ const audioFiles={boot:'Audio/nostalgia-computer-startup-1.wav',chime:'Audio/fru
     prompt:'Audio/frutiger-aero-incoming-call-ringtone-04-southwinds.wav',
     help:'Audio/settings-music-loop-128bpm-g-major.wav',
     profile:'Audio/frutiger-aero-ambient-kinda-chords-111bpm.flac',
-    about:'Audio/dreamscape.wav',
+    about:'Audio/dreamscape.mp3',
     sources:'Audio/piano-loops.wav'};
 let track=null,trackKey='',muted=false,activeWindow=null,highestZ=10,artist=localStorage.getItem('dq-artist')||'Artist',authMode='login';
 function sound(key,loop=false){if(track){track.pause();track.currentTime=0;track=null}trackKey=key;if(muted||!audioFiles[key])return;track=new Audio(audioFiles[key]);
